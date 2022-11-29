@@ -1,0 +1,148 @@
+@import "./mixin.scss";
+
+.header {
+    &-wrapper {
+        padding: 35px 0 15px;
+
+        width: 100%;
+
+        border-bottom: 1px solid var(--Color__Gray);
+
+        @media (max-width: 768px) {
+            padding-top: 30px;
+
+            border: none;
+        }
+    }
+
+    &-list {
+        @include displayFlex(center, space-between);
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &-item {
+        color: var(--Color__Black);
+
+        &__link {
+            color: inherit;
+            &:active,
+            &:focus,
+            &:focus-within,
+            &:target,
+            &:hover,
+            &:visited,
+            &:focus-visible {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.burger {
+    width: 33px;
+    height: 20px;
+
+    z-index: 999;
+
+    position: relative;
+
+    @include displayFlex(center, space-between, column);
+
+    display: none;
+
+    @media (max-width: 768px) {
+        display: block;
+
+        margin-left: auto;
+    }
+
+    & span {
+        width: 33px;
+        height: 4px;
+
+        background-color: var(--Color__Black);
+
+        position: absolute;
+
+        left: 0;
+        transition: all linear .2s;
+    }
+
+    & span:first-child {
+        top: 0;
+    }
+
+    & span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    & span:nth-child(3) {
+        top: auto;
+        bottom: 0;
+    }
+
+    &.activeBurger {
+        &.burger span {
+            top: 0;
+            bottom: 0;
+
+            background-color: var(--Color__Gray);
+        }
+
+        &.burger span:nth-child(1) {
+            rotate: 45deg;
+        }
+
+        &.burger span:nth-child(2) {
+            display: none;
+        }
+
+        &.burger span:nth-child(3) {
+            rotate: -45deg;
+        }
+    }
+}
+
+.nav {
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    &_modile {
+        display: none;
+
+        position: absolute;
+        inset: 0;
+
+        background-color: var(--Color__White);
+
+        padding: 60px 20px 30px 25px;
+
+        z-index: 888;
+    }
+
+    &_active{
+        display: block;
+    }
+
+    &-list {
+        @include displayFlex(flex-start, center, column);
+        gap: 40px;
+    }
+
+    &-item {
+        &__link {
+            @include font(
+                var(--SizeText__SubTitle),
+                100,
+                "Inter",
+                var(--LineHeight__SubTitle)
+            );
+        }
+    }
+}

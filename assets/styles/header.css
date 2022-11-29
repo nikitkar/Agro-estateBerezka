@@ -1,0 +1,115 @@
+.header-wrapper {
+  padding: 35px 0 15px;
+  width: 100%;
+  border-bottom: 1px solid var(--Color__Gray);
+}
+@media (max-width: 768px) {
+  .header-wrapper {
+    padding-top: 30px;
+    border: none;
+  }
+}
+.header-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .header-list {
+    display: none;
+  }
+}
+.header-item {
+  color: var(--Color__Black);
+}
+.header-item__link {
+  color: inherit;
+}
+.header-item__link:active, .header-item__link:focus, .header-item__link:focus-within, .header-item__link:target, .header-item__link:hover, .header-item__link:visited, .header-item__link:focus-visible {
+  font-weight: bold;
+}
+
+.burger {
+  width: 33px;
+  height: 20px;
+  z-index: 999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+}
+.burger span {
+  width: 33px;
+  height: 4px;
+  background-color: var(--Color__Black);
+  position: absolute;
+  left: 0;
+  transition: all linear 0.2s;
+}
+.burger span:first-child {
+  top: 0;
+}
+.burger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger span:nth-child(3) {
+  top: auto;
+  bottom: 0;
+}
+.burger.activeBurger.burger span {
+  top: 0;
+  bottom: 0;
+  background-color: var(--Color__Gray);
+}
+.burger.activeBurger.burger span:nth-child(1) {
+  rotate: 45deg;
+}
+.burger.activeBurger.burger span:nth-child(2) {
+  display: none;
+}
+.burger.activeBurger.burger span:nth-child(3) {
+  rotate: -45deg;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+.nav_modile {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background-color: var(--Color__White);
+  padding: 60px 20px 30px 25px;
+  z-index: 888;
+}
+.nav_active {
+  display: block;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+.nav-item__link {
+  font-family: "Inter";
+  font-size: var(--SizeText__SubTitle);
+  line-height: var(--LineHeight__SubTitle);
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=header.css.map */

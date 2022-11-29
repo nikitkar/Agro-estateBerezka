@@ -1,0 +1,245 @@
+.main {
+  background-color: var(--Color__BDMain);
+}
+
+.first-section {
+  padding: 50px 0 95px;
+}
+@media (max-width: 768px) {
+  .first-section {
+    padding: 30px 0 35px;
+  }
+}
+.first-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .first-section__wrapper {
+    gap: 30px;
+  }
+}
+.first-section__title {
+  font-family: "Inter";
+  font-size: var(--SizeText__MainTitle);
+  line-height: var(--LineHeight__MainTitle);
+  font-weight: 100;
+  color: var(--Color__ThinBlack);
+  width: 100%;
+  text-align: center;
+}
+.first-section__img {
+  max-height: 402px;
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+.aboutus {
+  background-color: var(--Color__BDSection);
+  padding: 50px 0 60px;
+}
+@media (max-width: 768px) {
+  .aboutus {
+    padding: 30px 0 35px;
+  }
+}
+.aboutus-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.aboutus-title {
+  font-family: "Inter";
+  font-size: var(--SizeText__SubTitle);
+  line-height: var(--LineHeight__SubTitle);
+  font-weight: 100;
+  color: var(--Color__ThinBlack);
+  width: 100%;
+  text-align: center;
+}
+.aboutus-text {
+  color: var(--Color__ThinBlack);
+  text-align: center;
+  width: 100%;
+}
+
+.advantages {
+  padding: 50px 0 60px;
+}
+@media (max-width: 768px) {
+  .advantages {
+    padding: 30px 0 35px;
+  }
+}
+.advantages-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .advantages-wrapper {
+    gap: 40px;
+  }
+}
+.advantages-title {
+  font-family: "Inter";
+  font-size: var(--SizeText__SubTitle);
+  line-height: var(--LineHeight__SubTitle);
+  font-weight: 100;
+  color: var(--Color__ThinBlack);
+  width: 100%;
+  text-align: center;
+}
+.advantages-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .advantages-list {
+    gap: 25px;
+  }
+}
+.advantages-item {
+  max-width: 131px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .advantages-item {
+    gap: 15px;
+  }
+}
+.advantages-item__img {
+  max-height: 87px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.advantages-item__img-img {
+  align-self: stretch;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .advantages-item__img-img {
+    max-width: 60px;
+  }
+}
+.advantages-item__text {
+  color: var(--Color__Black);
+  text-align: center;
+}
+
+.photo {
+  background-color: var(--Color__BDSection);
+  padding: 50px 0 60px;
+}
+@media (max-width: 768px) {
+  .photo {
+    padding: 30px 0 35px;
+  }
+}
+.photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.photo-title {
+  font-family: "Inter";
+  font-size: var(--SizeText__SubTitle);
+  line-height: var(--LineHeight__SubTitle);
+  font-weight: 100;
+  color: var(--Color__ThinBlack);
+  width: 100%;
+  text-align: center;
+}
+.photo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .photo-list {
+    gap: 25px;
+  }
+}
+.photo-item {
+  max-height: 520px;
+  width: 100%;
+  height: 100%;
+}
+.photo-item__img {
+  max-height: 520px;
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+.social-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+@media (max-width: 768px) {
+  .social-list {
+    gap: 10px;
+  }
+}
+.social-item {
+  cursor: pointer;
+  transition: scale linear 0.2s;
+}
+.social-item:active, .social-item:focus, .social-item:focus-within, .social-item:target, .social-item:hover, .social-item:visited, .social-item:focus-visible {
+  scale: 1.3;
+}
+.social-item__img {
+  max-width: 50px;
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .social-item__img {
+    max-width: 35px;
+    max-height: 35px;
+  }
+}
+.social-legalInformation {
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 100;
+  color: var(--Color__Gray);
+}
+
+/*# sourceMappingURL=style.css.map */

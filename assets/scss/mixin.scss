@@ -1,0 +1,22 @@
+@mixin displayFlex(
+    $alignItems: center,
+    $justifyContent: space-between,
+    $flexDirection: row
+) {
+    display: flex;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin font(
+    $fontSize: 22px,
+    $fontWeight: 400,
+    $fontFamily: "Montserrat",
+    $lineHeight: normal
+) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}

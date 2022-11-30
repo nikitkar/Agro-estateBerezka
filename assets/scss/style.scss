@@ -13,6 +13,14 @@
     z-index: 999;
 
     margin: 0 auto;
+
+    transform: translateY(200%);
+
+    &.animation{
+        animation: go-top-bottomLogo 4s;
+
+        transform: translateY(0);
+    }
 }
 
 .slider {
@@ -83,6 +91,14 @@
             z-index: 888;
             color: var(--Color__White);
 
+            transform: translateY(-300%);
+
+            &.animation {
+                animation: go-top-bottomText 4s;
+
+                transform: translateY(0);
+            }
+
             &_boldT {
                 @include font(32px, 700, "Roboto");
             }
@@ -115,8 +131,12 @@
             text-transform: uppercase;
 
             color: #ffa800;
+            position: relative;
 
             z-index: 999;
+            top: 0;
+
+            animation: go-top-bottomBtn 0.5s infinite alternate;
         }
     }
 
@@ -149,6 +169,33 @@
         &_next {
             right: 0;
         }
+    }
+}
+
+@keyframes go-top-bottomLogo {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes go-top-bottomText {
+    0% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes go-top-bottomBtn {
+    from {
+        top: -10px;
+    }
+    to {
+        bottom: 5px;
     }
 }
 

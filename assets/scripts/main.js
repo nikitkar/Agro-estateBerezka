@@ -9,14 +9,25 @@ burger.addEventListener("click", () => {
     body.classList.toggle("hide");
 });
 
+const sliderId = document.getElementById("slider");
+const sliderTtem__text = document.querySelectorAll(".slider-item__text");
+const sliderTtem__logo = document.querySelectorAll(".slider-item__logo");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        sliderTtem__text.forEach((item) => item.classList.add("animation"));
+        sliderTtem__logo.forEach((item) => item.classList.add("animation"));
+    }
+});
+
 window.addEventListener("resize", () => {
     if (window.innerWidth < 930) slider();
 });
 
 function slider() {
     const carousel = document.querySelector(".slider-list"),
-        firstImg = carousel.querySelectorAll(".slider-item")[0],
-        arrowIcons = document.querySelectorAll(".slider-btn");
+        sliderItem = carousel.querySelectorAll(".slider-item")[0],
+        sliderBtn = document.querySelectorAll(".slider-btn");
 
     let isDragStart = false,
         isDragging = false,
@@ -27,23 +38,23 @@ function slider() {
     const showHideIcons = () => {
         let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
-        arrowIcons[0].style.opacity = carousel.scrollLeft == 0 ? ".4" : "1";
-        arrowIcons[0].disabled = carousel.scrollLeft == 0 ? true : false;
+        sliderBtn[0].style.opacity = carousel.scrollLeft == 0 ? ".4" : "1";
+        sliderBtn[0].disabled = carousel.scrollLeft == 0 ? true : false;
 
-        arrowIcons[1].style.opacity =
+        sliderBtn[1].style.opacity =
             carousel.scrollLeft >= scrollWidth ? ".4" : "1";
-        arrowIcons[1].style.opacity =
+        sliderBtn[1].style.opacity =
             carousel.scrollLeft >= scrollWidth ? true : false;
     };
 
     showHideIcons();
 
-    arrowIcons.forEach((icon) => {
+    sliderBtn.forEach((icon) => {
         icon.addEventListener("click", () => {
-            let firstImgWidth = firstImg.clientWidth + 50;
+            let sliderItemWidth = sliderItem.clientWidth + 50;
 
             carousel.scrollLeft +=
-                icon.id == "left" ? -firstImgWidth : firstImgWidth;
+                icon.id == "left" ? -sliderItemWidth : sliderItemWidth;
 
             setTimeout(() => showHideIcons(), 60);
         });
@@ -60,17 +71,17 @@ function slider() {
 
         positionDiff = Math.abs(positionDiff);
 
-        let firstImgWidth = firstImg.clientWidth + 50;
-        let valDifference = firstImgWidth - positionDiff;
+        let sliderItemWidth = sliderItem.clientWidth + 50;
+        let valDifference = sliderItemWidth - positionDiff;
 
         if (carousel.scrollLeft > prevScrollLeft) {
             return (carousel.scrollLeft +=
-                positionDiff > firstImgWidth / 3
+                positionDiff > sliderItemWidth / 3
                     ? valDifference
                     : -positionDiff);
         }
         carousel.scrollLeft -=
-            positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+            positionDiff > sliderItemWidth / 3 ? valDifference : -positionDiff;
     };
 
     const dragStart = (e) => {

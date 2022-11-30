@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Усадьба “Берёзка”</title>
 
+        <link
+            rel="shortcut icon"
+            href="./assets/images/logo/logo.svg"
+            type="image/x-icon"
+        />
+
         <link rel="stylesheet" href="./assets/styles/reset.css" />
         <link rel="stylesheet" href="./assets/styles/header.css" />
         <link rel="stylesheet" href="./assets/styles/footer.css" />
@@ -28,7 +34,9 @@
                                 >
                             </li>
                             <li class="header-item">
-                                <a class="header-item__link" href="./index.html#contacts"
+                                <a
+                                    class="header-item__link"
+                                    href="./index.html#contacts"
                                     >Контакты</a
                                 >
                             </li>
@@ -98,13 +106,155 @@
             <section class="first-section">
                 <div class="container">
                     <div class="first-section__wrapper">
-                        <h1 class="first-section__title">Усадьба “Берёзка”</h1>
+                        <h1 class="first-section__title">
+                            Агроусадьба “Берёзка”
+                        </h1>
 
                         <img
                             class="first-section__img"
                             src="./assets/images/house/homestead_break.jpeg"
                             alt="Фото дома с переднего плана"
                         />
+
+                        <div class="slider">
+                            <ul class="slider-list">
+                                <li class="slider-item">
+                                    <img
+                                        class="slider-item__bg"
+                                        src="./assets/images/banner/bg1.jpg"
+                                        alt="Фон баннера"
+                                    />
+                                    <div class="slider-item__content">
+                                        <p
+                                            class="slider-item__text slider-item__text_boldT"
+                                        >
+                                            <span
+                                                class="slider-item__text_light"
+                                                >#препонедельник -</span
+                                            >
+                                            <span
+                                                class="slider-item__text_color slider-item__text_bold"
+                                                >скидка</span
+                                            >
+                                            на любое вино
+                                            <span class="slider-item__text_bold"
+                                                >15%</span
+                                            >
+                                        </p>
+                                        <a
+                                            class="slider-item__button"
+                                            href="#contacts"
+                                            >Забронировать<br />↓</a
+                                        >
+                                    </div>
+
+                                    <img
+                                        src="./assets/images/logo/logo.svg"
+                                        alt="Логотип сайта"
+                                        class="logo"
+                                    />
+                                </li>
+                                <li class="slider-item">
+                                    <img
+                                        class="slider-item__bg"
+                                        src="./assets/images/banner/bg2.jpg"
+                                        alt="Фон баннера"
+                                    />
+                                    <div class="slider-item__content">
+                                        <p class="slider-item__text">
+                                            <span
+                                                class="slider-item__text_regular"
+                                                >Можно</span
+                                            >
+                                            заказать
+                                            <span
+                                                class="slider-item__text_color"
+                                                >профессиональное</span
+                                            >
+                                            банкетное обслуживание на высоком
+                                            уровне
+                                        </p>
+                                        <a
+                                            class="slider-item__button"
+                                            href="#contacts"
+                                            >забронировать банкет<br />↓</a
+                                        >
+                                    </div>
+
+                                    <img
+                                        src="./assets/images/logo/logo.svg"
+                                        alt="Логотип сайта"
+                                        class="logo"
+                                    />
+                                </li>
+                                <li class="slider-item">
+                                    <img
+                                        class="slider-item__bg"
+                                        src="./assets/images/banner/bg3.jpg"
+                                        alt="Фон баннера"
+                                    />
+                                    <div class="slider-item__content">
+                                        <p
+                                            class="slider-item__text slider-item__text_regularT"
+                                        >
+                                            Восхитительные
+                                            <span
+                                                class="slider-item__text_color"
+                                                >закаты</span
+                                            >. Много живописных мест, которые
+                                            можно использовать как фото-зону, и
+                                            уединённые локации для
+                                            <span
+                                                class="slider-item__text_color"
+                                                >романтических вечеров</span
+                                            >
+                                        </p>
+                                        <a
+                                            class="slider-item__button"
+                                            href="#contacts"
+                                            >Забронировать вечер<br />↓</a
+                                        >
+                                    </div>
+
+                                    <img
+                                        src="./assets/images/logo/logo.svg"
+                                        alt="Логотип сайта"
+                                        class="logo"
+                                    />
+                                </li>
+                                <li class="slider-item">
+                                    <img
+                                        class="slider-item__bg"
+                                        src="./assets/images/banner/bg4.jpg"
+                                        alt="Фон баннера"
+                                    />
+                                    <div class="slider-item__content">
+                                        <p class="slider-item__text">
+                                            Просторная территория.
+                                            <br />
+                                            <span
+                                                class="slider-item__text_color"
+                                                >Детская площадка. </span
+                                            ><br />Уютная веранда.
+                                        </p>
+                                        <a
+                                            class="slider-item__button"
+                                            href="#contacts"
+                                            >Забронировать<br />↓</a
+                                        >
+                                    </div>
+
+                                    <img
+                                        src="./assets/images/logo/logo.svg"
+                                        alt="Логотип сайта"
+                                        class="logo"
+                                    />
+                                </li>
+                            </ul>
+
+                            <button class="slider-btn slider-btn_prev" id="left">←</button>
+                            <button class="slider-btn slider-btn_next" id="btn_next">→</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -211,28 +361,28 @@
                             <div class="photo-item">
                                 <img
                                     class="photo-item__img"
-                                    src="./assets/images/house/house_side.png"
+                                    src="./assets/images/house/house_side.jpg"
                                     alt="Фото дома с боку"
                                 />
                             </div>
                             <div class="photo-item">
                                 <img
                                     class="photo-item__img"
-                                    src="./assets/images/house/second_floor.png"
+                                    src="./assets/images/house/second_floor.jpg"
                                     alt="Фото дома, второй этаж"
                                 />
                             </div>
                             <div class="photo-item">
                                 <img
                                     class="photo-item__img"
-                                    src="./assets/images/house/bedroom.png"
+                                    src="./assets/images/house/bedroom.jpg"
                                     alt="Фото дома, спальня"
                                 />
                             </div>
                             <div class="photo-item">
                                 <img
                                     class="photo-item__img"
-                                    src="./assets/images/house/kitchen.png"
+                                    src="./assets/images/house/kitchen.jpg"
                                     alt="Фото дома, кухня"
                                 />
                             </div>
@@ -242,7 +392,7 @@
             </section>
         </main>
 
-        <footer class="footer" >
+        <footer class="footer">
             <a name="contacts"></a>
             <div class="container">
                 <div class="footer-wrapper">

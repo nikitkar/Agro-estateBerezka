@@ -2,6 +2,139 @@
   background-color: var(--Color__BDMain);
 }
 
+.logo {
+  width: 50px;
+  height: 42px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34));
+  z-index: 999;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 50px;
+}
+.slider-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 50px;
+  max-width: 820px;
+  margin: 0 auto;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slider-list.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.slider-list.dragging .slider-item {
+  pointer-events: none;
+}
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  position: relative;
+  width: 160px;
+  height: 600px;
+}
+.slider-item__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 111;
+}
+.slider-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  z-index: 888;
+  width: 160px;
+}
+.slider-item__text {
+  font-family: "Roboto";
+  font-size: 24px;
+  line-height: normal;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+  z-index: 888;
+  color: var(--Color__White);
+}
+.slider-item__text_boldT {
+  font-family: "Roboto";
+  font-size: 32px;
+  line-height: normal;
+  font-weight: 700;
+}
+.slider-item__text_regularT {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 400;
+}
+.slider-item__text_light {
+  font-size: 16px;
+  font-weight: 100;
+}
+.slider-item__text_bold {
+  font-weight: 700;
+}
+.slider-item__text_regular {
+  font-weight: 300;
+}
+.slider-item__text_color {
+  color: #ffa800;
+}
+.slider-item__button {
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa800;
+  z-index: 999;
+}
+.slider-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: gray;
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 700;
+  color: white;
+  z-index: 999;
+}
+@media (max-width: 930px) {
+  .slider-btn {
+    display: block;
+  }
+}
+.slider-btn_prev {
+  left: 0;
+}
+.slider-btn_next {
+  right: 0;
+}
+
 .first-section {
   padding: 50px 0 95px;
 }

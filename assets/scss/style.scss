@@ -4,6 +4,154 @@
     background-color: var(--Color__BDMain);
 }
 
+.logo {
+    width: 50px;
+    height: 42px;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34));
+
+    z-index: 999;
+
+    margin: 0 auto;
+}
+
+.slider {
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+
+    padding: 0 50px;
+
+    &-list {
+        width: 100%;
+
+        @include displayFlex(flex-start, flex-start);
+        gap: 50px;
+
+        max-width: 820px;
+        margin: 0 auto;
+
+        overflow: hidden;
+
+        scroll-behavior: smooth;
+
+        &.dragging {
+            cursor: grab;
+            scroll-behavior: auto;
+        }
+
+        &.dragging .slider-item {
+            pointer-events: none;
+        }
+    }
+
+    &-item {
+        @include displayFlex(center, flex-end, column);
+        gap: 10px;
+
+        padding-top: 30px;
+        padding-bottom: 15px;
+
+        position: relative;
+
+        width: 160px;
+        height: 600px;
+
+        &__bg {
+            position: absolute;
+            inset: 0;
+
+            z-index: 111;
+        }
+
+        &__content {
+            @include displayFlex(center, center, column);
+            gap: 40px;
+
+            z-index: 888;
+
+            width: 160px;
+        }
+
+        &__text {
+            @include font(24px, 500, "Roboto");
+            text-align: center;
+            width: 100%;
+            word-break: break-word;
+
+            z-index: 888;
+            color: var(--Color__White);
+
+            &_boldT {
+                @include font(32px, 700, "Roboto");
+            }
+
+            &_regularT {
+                @include font(20px, 400, "Roboto");
+            }
+
+            &_light {
+                font-size: 16px;
+                font-weight: 100;
+            }
+
+            &_bold {
+                font-weight: 700;
+            }
+
+            &_regular {
+                font-weight: 300;
+            }
+
+            &_color {
+                color: #ffa800;
+            }
+        }
+
+        &__button {
+            @include font(12px, 700, "Inter");
+            text-align: center;
+            text-transform: uppercase;
+
+            color: #ffa800;
+
+            z-index: 999;
+        }
+    }
+
+    &-btn {
+        display: none;
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+        background-color: gray;
+
+        @include font(20px, 700, "Inter");
+        color: white;
+
+        z-index: 999;
+
+        @media (max-width: 930px) {
+            display: block;
+        }
+
+        &_prev {
+            left: 0;
+        }
+
+        &_next {
+            right: 0;
+        }
+    }
+}
+
 .first-section {
     padding: 50px 0 95px;
 
@@ -135,7 +283,6 @@
 
         @include displayFlex(center, center, column);
         gap: 30px;
-        
 
         @media (max-width: 768px) {
             gap: 15px;
